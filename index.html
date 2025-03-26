@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function determineGrade(score) {
+            let result;
+        
+            if (score >= 75) {
+                result = "Passed";
+            } else {
+                result = "Failed";
+            }
+        
+            return result;
+        }
+        
+        function getLetterGrade(score) {
+            let letterGrade;
+        
+            switch (true) {
+                case (score >= 90 && score <= 100):
+                    letterGrade = 'A';
+                    break;
+                case (score >= 80 && score < 90):
+                    letterGrade = 'B';
+                    break;
+                case (score >= 75 && score < 80):
+                    letterGrade = 'C';
+                    break;
+                default:
+                    letterGrade = 'F';
+            }
+        
+            return letterGrade;
+        }
+        
+        const studentScore = 85;
+        console.log(`Student Status: ${determineGrade(studentScore)}`);
+        console.log(`Letter Grade: ${getLetterGrade(studentScore)}`);
+        
+    </script>
+</body>
+</html>
